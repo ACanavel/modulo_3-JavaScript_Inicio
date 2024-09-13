@@ -3,6 +3,9 @@ body {
     font-family: "Rampart One", sans-serif;
     color: #333;
 }
+.wrapper {
+    flex: 1;
+}
 
 header, footer {
     background-color: #282c34;
