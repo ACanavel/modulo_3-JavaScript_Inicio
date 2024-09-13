@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos de String</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Métodos de String en JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nuevas_sintaxis.html">Siguiente Tema</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Métodos Recientes de String</h2>
+
+            <h3><code>trimStart()</code> y <code>trimEnd()</code></h3>
+            <p>Elimina los espacios en blanco del inicio o final de una cadena.</p>
+            <pre><code class="language-javascript">
+const texto = '   Hola Mundo   ';
+console.log(texto.trimStart()); // Salida: 'Hola Mundo   '
+console.log(texto.trimEnd());   // Salida: '   Hola Mundo'
+            </code></pre>
+
+            <h3><code>replaceAll()</code></h3>
+            <p>Devuelve una nueva cadena con todas las coincidencias de un patrón reemplazadas por una cadena de reemplazo.</p>
+            <pre><code class="language-javascript">
+const frase = 'El perro es el mejor amigo del perro';
+const nuevaFrase = frase.replaceAll('perro', 'gato');
+
+console.log(nuevaFrase); // Salida: 'El gato es el mejor amigo del gato'
+            </code></pre>
+
+            <h3>Separadores Numéricos</h3>
+            <p>Mejoran la legibilidad de números grandes utilizando el guión bajo <code>_</code> como separador.</p>
+            <pre><code class="language-javascript">
+const numeroGrande = 1_000_000_000;
+console.log(numeroGrande); // Salida: 1000000000
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators" target="_blank">Separadores Numéricos - MDN Web Docs</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog de JavaScript Avanzado.Realizado por AleCanache</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos Avanzados: Set, Symbols, Proxy y Reflect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Métodos Avanzados en JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Set</h2>
+            <p>Un <code>Set</code> es una colección de valores únicos.Un Set es como una lista (o array), pero con una diferencia importante: no permite que haya valores repetidos.</p>
+            <pre><code class="language-javascript">
+const conjunto = new Set();
+conjunto.add(1);
+conjunto.add(5);
+conjunto.add(1); // No se añade, ya que 1 ya existe
+
+console.log(conjunto); // Salida: Set {1, 5}
+            </code></pre>
+
+            <h2>Symbols</h2>
+            <p>Los <code>Symbol</code> son identificadores únicos e inmutables.</p>
+            <pre><code class="language-javascript">
+const id = Symbol('id');
+
+const usuario = {
+    nombre: 'Ana',
+    [id]: 12345
+};
+
+console.log(usuario[id]); // Salida: 12345
+            </code></pre>
+
+            <h2>Proxy y Reflect</h2>
+            <p>Los <code>Proxy</code> permiten crear un objeto que intercepte y redefina operaciones básicas.</p>
+            <pre><code class="language-javascript">
+const objetivo = {};
+const handler = {
+    get: function(obj, prop) {
+        return prop in obj ? obj[prop] : 42;
+    }
+};
+
+const proxy = new Proxy(objetivo, handler);
+
+console.log(proxy.a); // Salida: 42
+            </code></pre>
+            <p>El objeto <code>Reflect</code> proporciona métodos estáticos que corresponden a los interceptores de los proxies.</p>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank">Set - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol" target="_blank">Symbol - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank">Proxy - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Reflect" target="_blank">Reflect - MDN Web Docs</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog de JavaScript Avanzado.Realizado por AleCanache</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programación Orientada a Objetos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Programación Orientada a Objetos en JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="prototipos.html">Siguiente Tema</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Clases y Objetos</h2>
+            <p>En ES6, JavaScript introdujo la sintaxis de clases para facilitar la programación orientada a objetos.</p>
+
+            <h3>Definición de una Clase</h3>
+            <pre><code class="language-javascript">
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    saludar() {
+        console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`);
+    }
+}
+
+const persona1 = new Persona('Ana', 30);
+persona1.saludar(); // Salida: Hola, me llamo Ana y tengo 30 años.
+            </code></pre>
+
+            <h3>Herencia</h3>
+            <p>Las clases pueden heredar propiedades y métodos de otras clases usando la palabra clave <code>extends</code>.</p>
+            <pre><code class="language-javascript">
+class Estudiante extends Persona {
+    constructor(nombre, edad, carrera) {
+        super(nombre, edad);
+        this.carrera = carrera;
+    }
+
+    estudiar() {
+        console.log(`${this.nombre} está estudiando ${this.carrera}.`);
+    }
+}
+
+const estudiante1 = new Estudiante('Luis', 22, 'Ingeniería');
+estudiante1.saludar(); // Heredado de Persona
+estudiante1.estudiar();
+            </code></pre>
+
+            <h3>Polimorfismo</h3>
+            <p>El polimorfismo permite que las subclases redefinan métodos de la clase padre.</p>
+            <pre><code class="language-javascript">
+class Animal {
+    hacerSonido() {
+        console.log('El animal hace un sonido');
+    }
+}
+
+class Perro extends Animal {
+    hacerSonido() {
+        console.log('El perro ladra');
+    }
+}
+
+const animal = new Animal();
+const perro = new Perro();
+
+animal.hacerSonido(); // Salida: El animal hace un sonido
+perro.hacerSonido();  // Salida: El perro ladra
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes" target="_blank">Clases - MDN Web Docs</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog de JavaScript Avanzado.Realizado por AleCanache</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones y Tipos de Funciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Funciones y Tipos de Funciones</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="estructuras_control.html">Siguiente Tema</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Funciones en JavaScript</h2>
+            <p>Las funciones son bloques de código diseñados para realizar una tarea específica. En JavaScript, las funciones son objetos de primera clase, lo que significa que pueden ser asignadas a variables, pasadas como argumentos y retornadas desde otras funciones.</p>
+            <h3>Tipos de Funciones</h3>
+            <ul>
+                <li><strong>Funciones Declarativas</strong></li>
+            </ul>
+            <pre><code class="language-javascript">
+// Función Declarativa
+function sumar(a, b) {
+    return a + b;
+}
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions" target="_blank">Funciones - MDN Web Docs</a>
+            </p>
+
+            <ul>
+                <li><strong>Funciones Expresadas</strong> (Funciones Anónimas)</li>
+            </ul>
+            <pre><code class="language-javascript">
+// Función Expresada
+const restar = function(a, b) {
+    return a - b;
+};
+            </code></pre>
+
+            <ul>
+                <li><strong>Funciones Flecha</strong> (Arrow Functions)</li>
+            </ul>
+            <pre><code class="language-javascript">
+// Función Flecha
+const multiplicar = (a, b) => a * b;
+            </code></pre>
+
+            <h3>Parámetros y Argumentos</h3>
+            <p>Los <strong>parámetros</strong> son los nombres de variables en la declaración de la función. Los <strong>argumentos</strong> son los valores reales pasados a la función.</p>
+            <pre><code class="language-javascript">
+function saludar(nombre) { // 'nombre' es un parámetro
+    console.log(`Hola, ${nombre}!`);
+}
+
+saludar('Carlos'); // 'Carlos' es un argumento
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Parameter" target="_blank">Parámetro - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Glossary/Argument" target="_blank">Argumento - MDN Web Docs</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog de JavaScript Avanzado.Realizado por AleCanache</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

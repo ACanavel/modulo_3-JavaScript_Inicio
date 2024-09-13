@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevas Sintaxis en JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Nuevas Sintaxis en JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="metodos_avanzados.html">Siguiente Tema</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Fusión Nula (<code>??</code>)</h2>
+            <p>El operador de fusión nula devuelve su operando del lado derecho cuando el operando del lado izquierdo es <code>null</code> o <code>undefined</code>.</p>
+            <pre><code class="language-javascript">
+let usuario;
+let nombre = usuario ?? 'Invitado';
+
+console.log(nombre); // Salida: 'Invitado'
+            </code></pre>
+
+            <h2>Encadenamiento Opcional (<code>?.</code>)</h2>
+            <p>Permite acceder a propiedades anidadas sin causar un error si una referencia intermedia es <code>null</code> o <code>undefined</code>.</p>
+            <pre><code class="language-javascript">
+const persona = {
+    nombre: 'Carlos',
+    direccion: {
+        ciudad: 'Madrid'
+    }
+};
+
+console.log(persona.direccion?.ciudad); // Salida: 'Madrid'
+console.log(persona.contacto?.telefono); // Salida: undefined
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing" target="_blank">Fusión Nula - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining" target="_blank">Encadenamiento Opcional - MDN Web Docs</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog de JavaScript Avanzado.Realizado por AleCanache</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

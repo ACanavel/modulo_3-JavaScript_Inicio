@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructuras de Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Estructuras de Control en JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="evaluacion_condiciones.html">Siguiente Tema</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Introducción a las Estructuras de Control</h2>
+            <p>Las estructuras de control permiten alterar el flujo de ejecución de un programa en función de ciertas condiciones. En JavaScript, disponemos de estructuras condicionales y de bucles para repetir tareas.</p>
+            
+            <h3>Estructuras Condicionales</h3>
+            <h4>Sentencia <code>if</code></h4>
+            <p>La sentencia <code>if</code> ejecuta un bloque de código si una condición es verdadera.</p>
+            <pre><code class="language-javascript">
+// Ejemplo de uso de if
+let edad = 18;
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
+}
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">if...else - MDN Web Docs</a>
+            </p>
+
+            <h4>Sentencia <code>if...else</code></h4>
+            <p>Se utiliza para ejecutar un bloque de código si la condición es falsa.</p>
+            <pre><code class="language-javascript">
+let esEstudiante = false;
+if (esEstudiante) {
+    console.log("Tienes descuento de estudiante");
+} else {
+    console.log("No tienes descuento");
+}
+            </code></pre>
+
+            <h4>Sentencia <code>else if</code></h4>
+            <p>Permite verificar múltiples condiciones.</p>
+            <pre><code class="language-javascript">
+let nota = 85;
+if (nota >= 90) {
+    console.log("Calificación: A");
+} else if (nota >= 80) {
+    console.log("Calificación: B");
+} else {
+    console.log("Calificación: C");
+}
+            </code></pre>
+
+            <h4>Sentencia <code>switch</code></h4>
+            <p>La sentencia <code>switch</code> evalúa una expresión y ejecuta el código correspondiente al caso coincidente.</p>
+            <pre><code class="language-javascript">
+let diaSemana = 3;
+switch (diaSemana) {
+    case 1:
+        console.log("Lunes");
+        break;
+    case 2:
+        console.log("Martes");
+        break;
+    case 3:
+        console.log("Miércoles");
+        break;
+    default:
+        console.log("Otro día");
+}
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">switch - MDN Web Docs</a>
+            </p>
+
+            <h3>Bucles o Ciclos</h3>
+            <h4>Bucle <code>for</code></h4>
+            <p>Se utiliza para iterar sobre un bloque de código un número conocido de veces.</p>
+            <pre><code class="language-javascript">
+// Imprimir números del 1 al 5
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for" target="_blank">for - MDN Web Docs</a>
+            </p>
+
+            <h4>Bucle <code>while</code></h4>
+            <p>Ejecuta un bloque de código mientras una condición sea verdadera.</p>
+            <pre><code class="language-javascript">
+let contador = 1;
+while (contador <= 5) {
+    console.log(contador);
+    contador++;
+}
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/while" target="_blank">while - MDN Web Docs</a>
+            </p>
+
+            <h4>Bucle <code>do...while</code></h4>
+            <p>Similar al bucle <code>while</code>, pero la condición se evalúa después de ejecutar el bloque de código al menos una vez.</p>
+            <pre><code class="language-javascript">
+let numero = 6;
+do {
+    console.log(numero);
+    numero++;
+} while (numero <= 5);
+            </code></pre>
+            <p>En este caso, aunque la condición es falsa desde el inicio, el código dentro del <code>do</code> se ejecuta una vez.</p>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">do...while - MDN Web Docs</a>
+            </p>
+
+            <h3>Control de Bucles</h3>
+            <h4>Sentencia <code>break</code></h4>
+            <p>Termina el bucle actual inmediatamente.</p>
+            <pre><code class="language-javascript">
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        break; // Sale del bucle cuando i es 5
+    }
+    console.log(i);
+}
+            </code></pre>
+
+            <h4>Sentencia <code>continue</code></h4>
+            <p>Omite la iteración actual y continúa con la siguiente.</p>
+            <pre><code class="language-javascript">
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        continue; // Salta la iteración cuando i es 3
+    }
+    console.log(i);
+}
+            </code></pre>
+            <p>Referencias:
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/break" target="_blank">break - MDN Web Docs</a>,
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/continue" target="_blank">continue - MDN Web Docs</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog de JavaScript Avanzado.Realizado por AleCanache</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
